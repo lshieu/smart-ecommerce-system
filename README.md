@@ -131,7 +131,7 @@ Using formular :  score = view_count * 0.2 + purchase_count * 0.8 + category_bon
 5) If Choose Manager, then the program opens the manager menu :
     manager.managerMenu(pm);
 
-### 4. Customer Flow
+## 4. Customer Flow
 - When the customer browses products, the Customer class calls: " pm.displayProducts(); "
 -  Then the customer can enter a product ID to view details. The system searches for the product: " Product* product = pm.findProductById(id); "
 -  If the product exists, the view count is increased: " product->increaseView(); "
@@ -140,7 +140,7 @@ Using formular :  score = view_count * 0.2 + purchase_count * 0.8 + category_bon
       Product statistics
       User interaction history
 
-### 5. Check out Flow
+## 5. Check out Flow
 Checkout is one of the most important flows in the system.
 - First, the system checks whether the cart is empty. If the cart is empty, checkout is stopped.
 - The system checks whether all products in the cart still have enough stock.
@@ -165,7 +165,7 @@ Checkout is one of the most important flows in the system.
 → ProductManager
 → RecommendationEngine
 
-### 6. Data Storage
+## 6. Data Storage
 The system uses text files to store data.
 1) products.txt : Store product information : ProductID|Name|Category|Color|Price|Stock|TotalViews|TotalSold
 2) orders.txt : Stores order history 
@@ -173,14 +173,14 @@ OrderID|CustomerName|ProductID|Quantity|Subtotal
 3) interacts.txt : Stores customer behavior for recommendation
 CustomerName|ProductID|ViewCount|PurchaseCount
 
-### 7. Recommendation Logic
+## 7. Recommendation Logic
 - The recommendation engine reads customer interaction history from interactions.txt.
 - For each product, it calculates a score:
   score = view_count * 0.2 + purchase_count * 0.8 + category_bonus
 -> The system then sorts products by score in descending order and displays the Top N recommended products.
 ->  The category bonus helps recommend products from categories that the customer has shown interest in before.
 
-### 8. OOP Concepts Applied
+## 8. OOP Concepts Applied
 1) Encapsulation
 - Class attributes are kept private, and other classes access them through public methods.
 
@@ -209,10 +209,33 @@ OrderManager → saves order history
 Manager → handles admin features
 RecommendationEngine → recommends products 
 
-### 10. Conclusion
+## 9. Conclusion
 - This project successfully implements a Smart E-Commerce System using Object-Oriented Programming in C++. The system supports customer shopping features, cart management, order processing, product management, system statistics, and a basic recommendation engine.
 
 - Through this project, I learned how different classes interact with each other in a real program. The project demonstrates important OOP concepts such as encapsulation, abstraction, composition, separation of responsibilities, and object collaboration.
+
+## 10. How to run the projectt 
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/lshieu/smart-ecommerce-system.git
+```
+### 2. Then go to the project folder:
+```bash
+cd smart-ecommerce-system
+```
+### 3. Check g++ version ( if not installed then install g++ )
+```bash
+g++ --version
+```
+### 4. Compile
+```bash
+g++ main.cpp src/*.cpp -o app
+```
+### 5. Run the program
+```bash
+.\app.exe
+```
    
    
    
