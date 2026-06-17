@@ -1,0 +1,4 @@
+/* OrderID|CustomerName|ProductID|Quantity|Subtotal */
+1001|Hieu|1|2|500000
+1001|Minh|6|20|100000
+1002|Phat|3|10|9000000
